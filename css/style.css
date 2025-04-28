@@ -4203,13 +4203,15 @@ input[type="button"].btn-block {
   }
 }
 
+/* Styles for screens that are 576px or larger */
 @media (min-width: 576px) {
   .navbar-expand-sm {
     flex-flow: row nowrap;
     justify-content: flex-start;
   }
   .navbar-expand-sm .navbar-nav {
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: row; /*EMA*/
   }
   .navbar-expand-sm .navbar-nav .dropdown-menu {
     position: absolute;
@@ -4231,6 +4233,32 @@ input[type="button"].btn-block {
   }
 }
 
+/* ------------------------------------------------------------- */
+/* For smaller screens (less than 576px) */
+@media (max-width: 576px) {
+  .navbar-expand-md .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically on smaller screens */
+  }
+
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: static; /* Change dropdown menu position */
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .navbar-expand-md .navbar-collapse {
+    display: block !important; /* Collapse the navbar items on smaller screens */
+  }
+
+  .navbar-expand-md .navbar-toggler {
+    display: block; /* Show the toggler on small screens */
+  }
+}
+/* ------------------------------------------------------------- */
+
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
@@ -4239,6 +4267,32 @@ input[type="button"].btn-block {
   }
 }
 
+/* ------------------------------------------------------------- */
+/* For smaller screens (less than 768px) */
+@media (max-width: 767px) {
+  .navbar-expand-md .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically on smaller screens */
+  }
+
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: static; /* Change dropdown menu position */
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .navbar-expand-md .navbar-collapse {
+    display: block !important; /* Collapse the navbar items on smaller screens */
+  }
+
+  .navbar-expand-md .navbar-toggler {
+    display: block; /* Show the toggler on small screens */
+  }
+}
+/* ------------------------------------------------------------- */
+
 @media (min-width: 768px) {
   .navbar-expand-md {
     flex-flow: row nowrap;
@@ -4246,6 +4300,7 @@ input[type="button"].btn-block {
   }
   .navbar-expand-md .navbar-nav {
     flex-direction: row;
+    /* flex-direction: column; */
   }
   .navbar-expand-md .navbar-nav .dropdown-menu {
     position: absolute;
@@ -4266,6 +4321,7 @@ input[type="button"].btn-block {
     display: none;
   }
 }
+
 
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
