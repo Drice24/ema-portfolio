@@ -64,7 +64,7 @@ portfolio/
 
 - Clean and modern UI
 - Responsive design for desktop, tablet, and mobile
-- Contact form with validation (to be transitioned from PHP to Flask)
+- Contact form with validation (to be transitioned from Formspree.io to Flask)
 - Optimized folder structure for scalability
 - Ready for API and database integration
 
@@ -72,7 +72,7 @@ portfolio/
 
 ## 🚧 Future Enhancements
 
-- 🔁 Convert PHP backend to **Flask** for the contact form
+- 🔁 Convert Formspree.io to **Flask** for the contact form
 - 🗃️ Integrate **database** to store and serve portfolio data dynamically
 - 🖼️ Admin dashboard for managing content
 - 🌐 Deploy to **free web hosting** or GitHub Pages (link will be updated)
@@ -89,7 +89,7 @@ portfolio/
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
