@@ -85,7 +85,7 @@
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
                     <div class="typed-text d-none">Software Developer, Powerbuilder Programmer</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="https://drive.google.com/file/d/1-cxur2R-X7kt8QzZ6Km0aBrt4-qLsKAt/view?usp=drive_link" class="btn btn-outline-light mr-5" target="_blank">Download CV</a>
+                        <a href="https://drive.google.com/file/d/1-cxur2R-X7kt8QzZ6Km0aBrt4-qLsKAt/view?usp=drive_link" class="btn btn-outline-light mr-0" target="_blank">Download CV</a> <!-- mr-5 original setup -->
                         <!-- <button type="button" class="btn-play" data-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                             <span></span>
@@ -420,33 +420,42 @@
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <!-- <form name="sentMessage" id="contactForm" novalidate="novalidate"> -->
+                            <form action="https://formspree.io/f/movdjejg" method="POST">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <!-- <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" /> -->
+                                    <input name="name" type="text" class="form-control p-4" id="name" placeholder="Your Name" required/>    
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <!-- <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" /> -->
+                                    <input name="email" type="email" class="form-control p-4" id="email" placeholder="Your Email" required/>    
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <!-- <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" /> -->
+                                <input name="subject" type="text" class="form-control p-4" id="subject" placeholder="Subject" required/>    
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                <!-- <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
                                     required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
+                                    data-validation-required-message="Please enter your message"></textarea> -->
+                                <textarea name="message" class="form-control py-3 px-4" rows="5" id="message" placeholder="Message" required></textarea>    
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
                                 <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
                                     Message</button>
+                            </div>
+
+                            <div id="thankYouMessage" style="display:none; color: green; font-weight: bold; margin-top: 15px;">
+                                Thank you! Your message has been sent.
                             </div>
                         </form>
                     </div>
@@ -508,6 +517,19 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-
+    <!-- To clear the form (stay on same page, no redirect) Formspree.io -->
+    <script>
+        const form = document.querySelector("form");
+        const thankYouMessage = document.getElementById("thankYouMessage");
+    
+        form.addEventListener("submit", function (e) {
+            // Let Formspree handle the submission first
+            setTimeout(() => {
+                form.reset(); // Clears the form
+                thankYouMessage.style.display = "block"; // Show the thank-you message
+            }, 1000); // Wait 1 second before clearing and showing message
+        });
+    </script>
+ 
 </body>
 </html>
