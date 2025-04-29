@@ -10141,13 +10141,12 @@ h6,
     line-height: 1.4;
     max-height: calc(1.4em * 9); /* roughly 8-9 lines */
     overflow-y: auto;
-    /* scrollbar-width: thin; Firefox */
+    scrollbar-width: thin; /* Firefox */
   }
 
   .hire-tooltip::after {
     border-width: 4px; /* Slightly smaller arrow */
     margin-top: -4px;
-    
   }
 
   .hire-tooltip::-webkit-scrollbar {
