@@ -10,8 +10,6 @@ The project is structured for future **Python Flask** and **database integration
 
 [![Live Preview](https://img.shields.io/badge/View-Live--Demo-brightgreen?style=for-the-badge&logo=google-chrome)](https://drice24.github.io/ema-portfolio/)
 
-> 🔁 *Replace the link above with your actual deployed site URL once it's live.*
-
 -----
 
 ## 📁 Folder Structure
