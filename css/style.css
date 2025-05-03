@@ -1912,9 +1912,11 @@ pre code {
 .form-control:focus {
   color: #495057;
   background-color: #fff;
-  border-color: #62f7df;
+  /* border-color: #62f7df; */ /* commented by EMA 05.03.2025*/
+  border-color: #84D2F6; 
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(11, 206, 175, 0.25);
+  /* box-shadow: 0 0 0 0.2rem rgba(11, 206, 175, 0.25); */ /* commented by EMA 05.03.2025*/
+  box-shadow: 0 0 0 0.2rem rgba(111, 191, 225, 1)
 }
 
 .form-control::placeholder {
