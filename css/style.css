@@ -10161,3 +10161,14 @@ h6,
   }
 }
 
+/* Center "Education & Experience" on small screens for responsiveness */
+@media (max-width: 576px) {
+  .centered-sm-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap; /* Optional: keeps the text in one line */
+  }
+}
+
